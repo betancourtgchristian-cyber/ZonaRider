@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO LOCAL CDMX METADATOS -->
+    <title>Zona Rider | Taller Mecánico de Motocicletas en CDMX</title>
+    <meta name="description" content="Tu moto en manos expertas. Taller mecánico especializado en motocicletas y motonetas en CDMX. Mantenimiento preventivo, correctivo, afinación y diagnóstico escáner.">
+    <meta name="keywords" content="taller de motos cdmx, taller mecanico motocicletas, mantenimiento de motos, afinación de motonetas, reparacion de motos coapa, zona rider cdmx, tu moto en manos expertas">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="MX-CMX">
+    <meta name="geo.placename" content="Ciudad de México">
+
+    <!-- OPEN GRAPH (VISTA PREVIA EN WHATSAPP Y REDES) -->
+    <meta property="og:title" content="Zona Rider | Tu moto en manos expertas">
+    <meta property="og:description" content="Tu moto en manos expertas. Garantía de 30 días, servicio especializado y agendamiento en línea en CDMX.">
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://zonarider.com.mx">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200">
+
+    <!-- SCHEMA MARKUP (JSON-LD) PARA GOOGLE MAPS / SEO LOCAL -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Zona Rider Garage",
+      "slogan": "Tu moto en manos expertas",
+      "image": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200",
+      "telephone": "+525573849264",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.33515,
+        "longitude": -99.13933
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:30",
+          "closes": "15:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Orbitron, Rajdhani y Press Start 2P -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Press+Start+2P&family=Rajdhani:wght@500;650;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .font-arcade {
+            font-family: 'Press Start 2P', monospace;
+        }
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #050505;
+        }
+        .skew-racer {
+            transform: skewX(-6deg);
+        }
+        .unskew-racer {
+            transform: skewX(6deg);
+        }
+        @keyframes motorIdle {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-1px, 1px); }
+            50% { transform: translate(1px, -1px); }
+            75% { transform: translate(-1px, -1px); }
+            100% { transform: translate(1px, 1px); }
+        }
+        .motor-vibe:hover {
+            animation: motorIdle 0.1s infinite;
+        }
+        @keyframes speedLine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .speed-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ef4444, transparent);
+            animation: speedLine 2s linear infinite;
+        }
+        .dark-maps iframe {
+            filter: grayscale(100%) invert(92%) contrast(120%) brightness(95%) hue-rotate(180deg);
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+        .dark-maps iframe:hover {
+            filter: grayscale(30%) invert(0%) contrast(100%) brightness(100%);
+            opacity: 1;
+        }
+        
+        @keyframes soundWave {
+            0%, 100% { height: 4px; }
+            50% { height: 24px; }
+        }
+        .bar-anim {
+            animation: soundWave 0.6s ease infinite;
+        }
+        .bar-2 { animation-delay: 0.15s; }
+        .bar-3 { animation-delay: 0.3s; }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+            50% { box-shadow: 0 0 35px rgba(239, 68, 68, 0.9); }
+        }
+        .arcade-glow {
+            animation: pulseGlow 2s infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ef4444;
+        }
+    </style>
+</head>
+<body class="text-zinc-100 antialiased selection:bg-red-600 selection:text-white overflow-x-hidden">
+
+    <!-- AUDIO OCULTO -->
+    <audio id="bg-music" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+
+    <!-- REPRODUCTOR FLOTANTE -->
+    <div class="fixed bottom-6 left-6 z-50 flex items-center gap-3 bg-black/80 border border-zinc-800 p-3 rounded-none skew-racer shadow-[0_0_20px_rgba(0,0,0,0.8)] backdrop-blur-md">
+        <button id="music-toggle-btn" class="unskew-racer w-10 h-10 bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-sm transition-colors shadow-lg shadow-red-600/20" aria-label="Reproducir Radio">
+            <i id="music-icon" class="fa-solid fa-play"></i>
+        </button>
+        <div class="unskew-racer pr-2 hidden sm:block">
+            <span class="block text-[10px] uppercase text-zinc-500 font-bold tracking-widest leading-none">Radio boxes</span>
+            <span class="block text-xs font-black uppercase text-white tracking-wider font-['Orbitron'] mt-0.5">ZONA RIDER BEATS</span>
+        </div>
+        <div id="equalizer" class="unskew-racer flex items-end gap-0.5 h-6 w-5 hidden">
+            <div class="w-1 bg-red-600 h-1 bar-anim"></div>
+            <div class="w-1 bg-red-650 h-1 bar-anim bar-2"></div>
+            <div class="w-1 bg-white h-1 bar-anim bar-3"></div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAV -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b-2 border-red-600/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-['Orbitron'] text-2xl font-black tracking-tighter text-white skew-racer">
+                ZONA <span class="text-red-600 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]">RIDER</span>
+            </a>
+            <nav class="hidden md:flex gap-6 text-base font-bold uppercase tracking-wider">
+                <a href="#confianza" class="hover:text-red-500 transition-colors">Garantía</a>
+                <a href="#paquetes" class="hover:text-red-500 transition-colors">Paquetes</a>
+                <a href="#arrancón" class="hover:text-red-500 text-red-500 transition-colors"><i class="fa-solid fa-gamepad mr-1"></i> GP Challenge</a>
+                <a href="#agenda" class="hover:text-red-500 transition-colors">Agenda Cita</a>
+                <a href="#resenas" class="hover:text-red-500 transition-colors">Reseñas</a>
+                <a href="#trabajo" class="hover:text-red-500 transition-colors">Bolsa de Trabajo</a>
+                <a href="#ubicacion" class="text-red-500 hover:text-red-400 transition-colors"><i class="fa-solid fa-location-dot mr-1"></i> Ubicación CDMX</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://www.instagram.com/zonaridermx/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors text-xl hidden sm:block" aria-label="Instagram Zona Rider">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/525573849264" target="_blank" rel="noopener" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 uppercase tracking-wide skew-racer transition-all duration-200">
+                    <span class="unskew-racer block text-sm"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION CON ESLOGAN ESTRATÉGICO -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1920')] bg-cover bg-center filter grayscale contrast-150 brightness-50 mix-blend-luminosity"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-black/80"></div>
+        <div class="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#ef444410_1px,transparent_1px),linear-gradient(to_bottom,#ef444410_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl tracking-wide skew-racer">
+            <div class="inline-block bg-red-600 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 mb-6 unskew-racer">
+                Taller Premium de Motocicletas en CDMX
+            </div>
+            
+            <h1 class="font-['Orbitron'] text-5xl md:text-8xl font-black text-white italic leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+                ZONA <span class="text-red-600 drop-shadow-[0_0_20px_rgba(220,38,38,0.8)]">RIDER</span>
+            </h1>
+            
+            <!-- ESLOGAN PRINCIPAL -->
+            <p class="mt-6 text-2xl md:text-4xl text-white font-black uppercase tracking-wider unskew-racer italic text-zinc-100">
+                "TU MOTO EN MANOS EXPERTAS"
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 unskew-racer">
+                <a href="#agenda" class="bg-red-600 hover:bg-red-700 text-white font-black px-8 py-4 text-lg uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] flex items-center justify-center gap-2 motor-vibe">
+                    <i class="fa-solid fa-gauge-high"></i> Agendar Cita en LÍNEA
+                </a>
+                <a href="https://wa.me/525573849264" target="_blank" rel="noopener" class="bg-transparent border-2 border-white hover:border-red-600 hover:text-red-500 text-white font-black px-8 py-4 text-lg uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> 55 7384 9264
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative h-1 bg-zinc-900 overflow-hidden speed-bar"></div>
+
+    <!-- SECCIÓN DE CONFIANZA Y RESPALDO -->
+    <section id="confianza" class="py-16 bg-zinc-950 border-b border-zinc-900 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+            <div class="p-6 bg-black border-l-4 border-red-600 shadow-xl">
+                <div class="text-red-650 text-4xl mb-3"><i class="fa-solid fa-trophy"></i></div>
+                <h3 class="text-2xl font-bold uppercase text-white mb-2">Más de 10 Años en CDMX</h3>
+                <p class="text-zinc-400">Una década diagnosticando, reparando y optimizando motores y sistemas de motocicletas con precisión profesional.</p>
+            </div>
+            <div class="p-6 bg-black border-l-4 border-white shadow-xl">
+                <div class="text-white text-4xl mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="text-2xl font-bold uppercase text-white mb-2">Garantía Total por Escrito (30 Días)</h3>
+                <p class="text-zinc-400">Respaldamos cada servicio mecánico y afinación. Tu motocicleta sale lista y probada a la calle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTADO DE PRECIOS Y PAQUETES CON ESLOGAN -->
+    <section id="paquetes" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="mb-16 text-center">
+            <h2 class="font-['Orbitron'] text-3xl md:text-5xl font-black uppercase italic text-white tracking-wider">
+                Servicios de <span class="text-red-600">Mantenimiento</span>
+            </h2>
+            <!-- ESLOGAN EN PAQUETES -->
+            <p class="text-red-500 font-bold uppercase text-sm md:text-base tracking-widest mt-2">"Tu moto en manos expertas"</p>
+            <div class="w-24 h-1 bg-red-600 mx-auto mt-3 mb-3"></div>
+            <p class="text-zinc-500 text-sm uppercase tracking-widest">Precios base válidos hasta 250cc en CDMX. Consulta modelos de mayor cilindraje.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+            <!-- Preventivo -->
+            <div class="bg-zinc-950 border border-zinc-850 p-6 flex flex-col justify-between rounded-none shadow-2xl relative overflow-hidden">
+                <div>
+                    <h3 class="text-xl font-bold uppercase tracking-wider text-zinc-400 mb-4">Preventivo</h3>
+                    <div class="mb-6">
+                        <span class="text-xs uppercase text-zinc-500 block">Motoneta Desde</span>
+                        <span class="text-3xl font-black text-white font-['Orbitron']">$549.00</span>
+                        <span class="text-sm text-zinc-400 block mt-1">Moto desde: $649</span>
+                    </div>
+                    <ul class="text-zinc-400 space-y-2 border-t border-zinc-900 pt-4 text-sm">
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Cambio de Aceite Mineral/Sintético</li>
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Limpieza de Filtro de Aire</li>
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Ajuste y Lubricación de Cadena</li>
+                    </ul>
+                </div>
+                <a href="#agenda" class="mt-8 block text-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2.5 uppercase tracking-wide text-sm transition-colors">Agendar Servicio</a>
+            </div>
+
+            <!-- Premium -->
+            <div class="bg-zinc-950 border-2 border-red-600 p-6 flex flex-col justify-between rounded-none shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1">Más Solicitado</div>
+                <div>
+                    <h3 class="text-xl font-bold uppercase tracking-wider text-red-500 mb-4">Premium</h3>
+                    <div class="mb-6">
+                        <span class="text-xs uppercase text-zinc-500 block">Motoneta Desde</span>
+                        <span class="text-3xl font-black text-white font-['Orbitron']" id="price-premium">$1,149.00</span>
+                        <span class="text-sm text-zinc-400 block mt-1" id="label-premium">Moto desde: $1,299</span>
+                    </div>
+                    <ul class="text-zinc-400 space-y-2 border-t border-zinc-900 pt-4 text-sm">
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Incluye Preventivo Completo</li>
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Lavado y Ajuste de Carburador / Inyección</li>
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Calibración / Cambio de Bujías</li>
+                    </ul>
+                </div>
+                <a href="#agenda" class="mt-8 block text-center bg-red-600 hover:bg-red-700 text-white font-black py-2.5 uppercase tracking-wide text-sm transition-colors">Agendar Servicio</a>
+            </div>
+
+            <!-- Rider Completo -->
+            <div class="bg-zinc-950 border border-zinc-850 p-6 flex flex-col justify-between rounded-none shadow-2xl relative overflow-hidden">
+                <div>
+                    <h3 class="text-xl font-bold uppercase tracking-wider text-zinc-300 mb-4">Rider Completo</h3>
+                    <div class="mb-6">
+                        <span class="text-xs uppercase text-zinc-500 block">Motoneta Desde</span>
+                        <span class="text-3xl font-black text-white font-['Orbitron']" id="price-rider">$1,499.00</span>
+                        <span class="text-sm text-zinc-400 block mt-1" id="label-rider">Moto desde: $1,649</span>
+                    </div>
+                    <ul class="text-zinc-400 space-y-2 border-t border-zinc-900 pt-4 text-sm">
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Mantenimiento Profundo Integral</li>
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Revisión de Suspensión y Frenos</li>
+                        <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Diagnóstico Avanzado con Escáner</li>
+                    </ul>
+                </div>
+                <a href="#agenda" class="mt-8 block text-center bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2.5 uppercase tracking-wide text-sm transition-colors">Agendar Servicio</a>
+            </div>
+
+            <!-- Zona Rider Club -->
+            <div class="bg-zinc-900 border border-red-600/40 p-6 flex flex-col justify-between rounded-none shadow-2xl relative overflow-hidden">
+                <div>
+                    <h3 class="text-xl font-bold uppercase tracking-wider text-white mb-1">Zona Rider</h3>
+                    <h3 class="text-xl font-black uppercase tracking-wider text-red-600 mb-4 font-['Orbitron']">CLUB</h3>
+                    <div class="mb-6">
+                        <span class="text-3xl font-black text-white font-['Orbitron']">$299.00</span>
+                        <span class="text-xs uppercase text-zinc-400 block mt-1">/mes - pago anual</span>
+                    </div>
+                    <ul class="text-zinc-300 space-y-2 border-t border-zinc-800 pt-4 text-sm">
+                        <li><i class="fa-solid fa-star text-red-600 mr-2"></i>Prioridad de atención en boxes</li>
+                        <li><i class="fa-solid fa-star text-red-600 mr-2"></i>10% Descuento en mano de obra</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/525573849264?text=Hola,%20me%20interesa%20unirme%20a%20Zona%20Rider%20Club" target="_blank" rel="noopener" class="mt-8 block text-center bg-transparent border border-red-600 hover:bg-red-600/20 text-red-500 font-bold py-2.5 uppercase tracking-wide text-sm transition-colors">Preguntar por Membresía</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINIJUEGO RIDER DODGER -->
+    <section id="arrancón" class="py-20 bg-zinc-950 border-t-2 border-red-600 px-4 md:px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <div class="bg-black border-4 border-zinc-800 p-3 md:p-8 shadow-[0_0_50px_rgba(239,68,68,0.25)] relative rounded-lg arcade-glow">
+                
+                <div class="inline-flex items-center gap-3 bg-red-600 text-white font-arcade text-xs md:text-sm px-6 py-2 mb-4 uppercase tracking-widest shadow-lg border-2 border-white">
+                    <i class="fa-solid fa-triangle-exclamation text-yellow-300"></i> ZONA RIDER DODGE CHALLENGE
+                </div>
+
+                <h2 class="font-['Orbitron'] text-2xl md:text-5xl font-black uppercase text-white italic tracking-wider">
+                    ¿TIENES MANOS DE <span class="text-red-600 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">PILOTO?</span>
+                </h2>
+                <p class="text-zinc-300 text-xs md:text-base mt-2 max-w-2xl mx-auto font-bold uppercase tracking-wide">
+                    Demuestra tu habilidad en el circuito. Esquiva los obstáculos durante <span class="text-yellow-400">45 segundos</span> y gana un <span class="text-red-500 bg-red-950/80 px-2 py-0.5 border border-red-600">10% DE DESCUENTO</span>.
+                </p>
+
+                <!-- PANTALLA ARCADE DE JUEGO -->
+                <div class="mt-6 border-4 border-zinc-700 bg-black rounded overflow-hidden relative shadow-2xl">
+                    
+                    <div class="relative overflow-hidden aspect-[4/3] max-h-[420px] w-full">
+                        <canvas id="raceCanvas" width="600" height="420" class="w-full h-full block bg-blue-700"></canvas>
+                        
+                        <!-- OVERLAY DE REGISTRO CON VALIDACIÓN ESTRICTA -->
+                        <div id="game-auth-box" class="absolute inset-0 bg-black/85 backdrop-blur-sm flex flex-col justify-center items-center p-4 z-20">
+                            
+                            <div class="bg-zinc-950 border-2 border-red-600 p-5 max-w-md w-full shadow-2xl text-left">
+                                <h4 class="font-arcade text-xs text-center text-white leading-relaxed mb-1 uppercase">
+                                    <span class="text-red-500"><i class="fa-solid fa-shield-halved"></i> REGISTRO DE PILOTO</span>
+                                </h4>
+                                <p class="text-[10px] text-center text-zinc-400 font-sans mb-3 italic">"Tu moto en manos expertas"</p>
+
+                                <div class="bg-zinc-900 border border-zinc-800 p-3 mb-4 text-[11px] text-zinc-300 uppercase space-y-1 font-bold">
+                                    <div><i class="fa-solid fa-arrows-left-right text-red-500 mr-2"></i> PC: Flechas Izquierda / Derecha</div>
+                                    <div><i class="fa-solid fa-mobile-screen text-red-500 mr-2"></i> Celular: Botones direccionales</div>
+                                    <div><i class="fa-solid fa-stopwatch text-yellow-500 mr-2"></i> Sobrevive 45 segundos</div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="text-[10px] uppercase text-zinc-400 font-bold tracking-widest block mb-1">Nombre del Piloto</label>
+                                        <input type="text" id="game-pilot-name" placeholder="Ej. Carlos Mendoza" class="w-full bg-black border border-zinc-800 text-white px-3 py-2 text-sm outline-none focus:border-red-600">
+                                    </div>
+                                    <div>
+                                        <label class="text-[10px] uppercase text-zinc-400 font-bold tracking-widest block mb-1">Celular (10 dígitos exactos)</label>
+                                        <input type="tel" id="game-pilot-phone" maxlength="10" placeholder="Ej. 5573849264" class="w-full bg-black border border-zinc-800 text-white px-3 py-2 text-sm outline-none focus:border-red-600">
+                                        <span id="phone-error-msg" class="text-red-500 text-[10px] hidden font-bold mt-1 block">⚠️ Ingresa un celular válido de 10 números sin letras.</span>
+                                    </div>
+                                    <button onclick="startRaceSequence()" class="w-full bg-red-600 hover:bg-red-700 text-white font-black py-3 uppercase tracking-wider text-sm shadow-xl flex items-center justify-center gap-2 motor-vibe">
+                                        <i class="fa-solid fa-play"></i> 🎮 VALIDAR Y EMPEZAR
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BARRA INFERIOR DE ESTADO -->
+                    <div id="game-controls-bar" class="bg-zinc-950 p-3 border-t border-zinc-800 hidden flex justify-between items-center">
+                        <div class="text-xs uppercase font-bold text-zinc-400">
+                            Piloto: <span id="display-pilot-name" class="text-red-500">---</span>
+                        </div>
+                        <div id="game-status-text" class="font-arcade text-[10px] text-yellow-400">
+                            TIME: 45S
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTONES MÓVILES -->
+                <div id="mobile-controls" class="mt-4 grid grid-cols-2 gap-4 hidden md:hidden">
+                    <button id="btn-left" class="bg-zinc-900 border-2 border-red-600 text-white font-black py-4 text-xl active:bg-red-600 rounded">
+                        👈 IZQUIERDA
+                    </button>
+                    <button id="btn-right" class="bg-zinc-900 border-2 border-red-600 text-white font-black py-4 text-xl active:bg-red-600 rounded">
+                        DERECHA 👉
+                    </button>
+                </div>
+
+                <!-- MENSAJE DE VICTORIA -->
+                <div id="game-success-box" class="mt-6 bg-emerald-950/30 border-2 border-emerald-500 p-6 hidden">
+                    <span class="text-4xl text-emerald-400 block mb-2"><i class="fa-solid fa-trophy animate-bounce"></i></span>
+                    <h4 class="text-white text-xl font-black uppercase tracking-wider font-['Orbitron']">¡VICTORIA! DESCUENTO RACER ACTIVADO</h4>
+                    <p class="text-zinc-200 text-sm mt-2">Esquivaste todos los obstáculos. Tu código de descuento oficial es: <strong id="promo-code-display" class="text-emerald-400 bg-black px-3 py-1 border border-emerald-600 font-arcade text-xs ml-1">ZR-XXXX-WIN</strong></p>
+                    <p class="text-zinc-400 text-xs mt-2 uppercase">El 10% de descuento se inyectó automáticamente en el formulario de abajo.</p>
+                    <a href="#agenda" class="mt-4 inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black py-3 px-8 uppercase tracking-widest shadow-lg">Bajar a Agendar mi Cita</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALENDARIO DE CITAS (14 DÍAS MÓVILES) -->
+    <section id="agenda" class="py-24 bg-gradient-to-b from-[#050505] to-zinc-950 border-t border-zinc-900 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-14 text-center">
+                <h2 class="font-['Orbitron'] text-4xl font-black uppercase italic text-white tracking-wider">
+                    Agenda tu Cita en <span class="text-red-600">CDMX</span>
+                </h2>
+                <p class="text-zinc-400 mt-3 text-lg">Selecciona fecha dentro de las próximas 2 semanas y aparta tu horario en boxes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 bg-black p-6 md:p-10 border border-zinc-800 shadow-[0_0_30px_rgba(239,68,68,0.05)]">
+                <!-- Paso 1: Selector de Día -->
+                <div class="lg:col-span-1 border-b lg:border-b-0 lg:border-r border-zinc-800 pb-8 lg:pb-0 lg:pr-8">
+                    <h4 class="text-red-500 font-['Orbitron'] uppercase font-bold tracking-wider mb-4 flex items-center justify-between">
+                        <span class="flex items-center gap-2">
+                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> 
+                            Selecciona Día
+                        </span>
+                        <span class="text-[10px] text-zinc-500 font-sans font-normal">(14 Días Disp.)</span>
+                    </h4>
+                    <div class="grid grid-cols-1 gap-2.5 max-h-80 overflow-y-auto pr-2" id="date-selector"></div>
+                </div>
+
+                <!-- Paso 2 & 3: Horas y Formulario -->
+                <div class="lg:col-span-2 lg:pl-4">
+                    <h4 class="text-red-500 font-['Orbitron'] uppercase font-bold tracking-wider mb-6 flex items-center gap-2">
+                        <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span> 
+                        Slots de Horarios Disponibles
+                    </h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="time-selector">
+                        <div class="col-span-full py-4 text-zinc-500 italic text-center">
+                            Por favor, selecciona un día de la izquierda para desplegar los horarios correspondientes.
+                        </div>
+                    </div>
+
+                    <!-- Formulario de reserva -->
+                    <div id="booking-form-container" class="mt-10 pt-8 border-t border-zinc-900 hidden opacity-0 transition-all duration-300">
+                        <h4 class="text-white font-['Orbitron'] uppercase font-bold tracking-wider mb-6 flex items-center gap-2">
+                            <span class="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</span>
+                            Datos del Piloto & Máquina
+                        </h4>
+                        <form id="appointment-form" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <input type="hidden" id="selected-date-input">
+                            <input type="hidden" id="selected-time-input">
+                            
+                            <div>
+                                <label class="text-xs uppercase text-zinc-400 font-bold tracking-wider block mb-2">Nombre del Piloto</label>
+                                <input type="text" required id="user-name" placeholder="Ej. Carlos Mendoza" class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-600 text-white px-4 py-3 outline-none">
+                            </div>
+                            <div>
+                                <label class="text-xs uppercase text-zinc-400 font-bold tracking-wider block mb-2">Número de Celular</label>
+                                <input type="tel" required id="user-phone" placeholder="Ej. 5573849264" class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-600 text-white px-4 py-3 outline-none">
+                            </div>
+                            <div>
+                                <label class="text-xs uppercase text-zinc-400 font-bold tracking-wider block mb-2">Modelo de la Moto</label>
+                                <input type="text" required id="bike-model" placeholder="Ej. Honda CGL 125" class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-600 text-white px-4 py-3 outline-none">
+                            </div>
+                            <div>
+                                <label class="text-xs uppercase text-zinc-400 font-bold tracking-wider block mb-2">Servicio Requerido</label>
+                                <select required id="required-service" class="w-full bg-zinc-950 border border-zinc-800 focus:border-red-600 text-zinc-300 px-4 py-3 outline-none">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="Preventivo">Mantenimiento Preventivo</option>
+                                    <option value="Premium">Mantenimiento Premium</option>
+                                    <option value="Rider Completo">Mantenimiento Rider Completo</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-black py-4 uppercase tracking-wider shadow-lg">
+                                    Confirmar Cita vía WhatsApp
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section id="resenas" class="py-24 bg-zinc-950 border-t border-zinc-900 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 flex flex-col lg:flex-row justify-between items-center gap-6 border-b border-zinc-900 pb-10">
+                <div>
+                    <h2 class="font-['Orbitron'] text-4xl font-black uppercase italic text-white tracking-wider">
+                        Opiniones de <span class="text-red-600">Pilotos</span>
+                    </h2>
+                </div>
+                <div class="bg-black border border-zinc-800 p-6 flex items-center gap-6 max-w-sm skew-racer shadow-xl">
+                    <div class="text-center unskew-racer">
+                        <span class="block text-4xl font-black text-white font-['Orbitron']">4.9</span>
+                        <span class="text-xs text-zinc-500 uppercase font-bold">De 5 estrellas en CDMX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-black border border-zinc-900 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                    <p class="text-zinc-300 text-md italic leading-relaxed">"Excelente servicio premium. Llevé mi motoneta por una falla eléctrica compleja y quedó lista el mismo día."</p>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+                        <div>
+                            <h4 class="text-white font-bold uppercase tracking-wide text-sm">Alejandro R.</h4>
+                            <span class="text-xs text-red-500 font-medium tracking-wide">Suzuki Gixxer 150</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-black border border-zinc-900 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                    <p class="text-zinc-300 text-md italic leading-relaxed">"Tienen los paquetes súper estructurados. Me animé por el paquete Premium y el cambio de rendimiento se siente de inmediato."</p>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+                        <div>
+                            <h4 class="text-white font-bold uppercase tracking-wide text-sm">Héctor M.</h4>
+                            <span class="text-xs text-red-500 font-medium tracking-wide">Yamaha FZ25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-black border border-zinc-900 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                    <p class="text-zinc-300 text-md italic leading-relaxed">"Fui por una emergencia directo sin cita. Me atendieron de volada en boxes. ¡Súper recomendado!"</p>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+                        <div>
+                            <h4 class="text-white font-bold uppercase tracking-wide text-sm">Diana G.</h4>
+                            <span class="text-xs text-red-500 font-medium tracking-wide">Vento Rocketman 250</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRABAJA CON NOSOTROS -->
+    <section id="trabajo" class="py-24 bg-black border-t border-zinc-900 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10 skew-racer">
+            <div class="bg-zinc-900 border border-zinc-850 p-8 md:p-12 shadow-2xl">
+                <h2 class="font-['Orbitron'] text-3xl md:text-4xl font-black uppercase italic text-white tracking-wider unskew-racer">
+                    Únete a la <span class="text-red-600">Escudería</span>
+                </h2>
+                <p class="text-zinc-300 text-lg md:text-xl max-w-2xl mx-auto unskew-racer leading-relaxed mt-4">
+                    ¿Eres un mecánico de motos apasionado o técnico especializado en CDMX? Estamos buscando talento técnico.
+                </p>
+                <div class="mt-8 unskew-racer">
+                    <a href="https://wa.me/525573849264?text=Hola,%20estoy%20interesado%20en%20formar%20parte%20del%20equipo%20de%20trabajo%20de%20Zona%20Rider" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-black px-8 py-4 uppercase tracking-wider text-md motor-vibe shadow-lg">
+                        <i class="fa-solid fa-wrench text-lg"></i> Postularme / Enviar WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN CDMX CON MAPA EMBEBIDO -->
+    <section id="ubicacion" class="py-20 bg-zinc-950 border-t border-zinc-900 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+            <div class="lg:col-span-1 space-y-6">
+                <h2 class="font-['Orbitron'] text-3xl font-black uppercase italic text-white tracking-wider">
+                    ¿Dónde <span class="text-red-600">Encontrarnos?</span>
+                </h2>
+                <p class="text-zinc-400 text-lg">Visítanos en nuestro taller mecánico principal en la **Ciudad de México (CDMX)**.</p>
+                <a href="https://maps.app.goo.gl/KAGeZkonKrkE1SrS9" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-white font-bold px-6 py-3 uppercase tracking-wider text-sm border border-zinc-800 skew-racer">
+                    <span class="unskew-racer block"><i class="fa-solid fa-arrow-turn-up text-red-500 mr-1"></i> Abrir en Google Maps</span>
+                </a>
+            </div>
+
+            <div class="lg:col-span-2 w-full h-[400px] border-2 border-zinc-800 bg-black shadow-2xl overflow-hidden relative dark-maps">
+                <iframe 
+                    title="Ubicación Taller Zona Rider CDMX"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4274.59908498206!2d-99.13933192427142!3d19.33515468192347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0112b52225df%3A0xf745dda6e11cc6f3!2sZona%20Rider!5e1!3m2!1ses!2smx!4v1784391423784!5m2!1ses!2smx" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CON HORARIO DE SÁBADO A LAS 3:00 PM Y ALIADOS ESTRATÉGICOS -->
+    <footer class="bg-black py-16 border-t-4 border-red-600 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+            <div class="space-y-4">
+                <p class="font-['Orbitron'] text-3xl font-black text-white italic tracking-tighter">
+                    ZONA <span class="text-red-600">RIDER</span>
+                </p>
+                <p class="text-xs text-zinc-400 font-bold uppercase tracking-wider">"Tu moto en manos expertas"</p>
+                <p class="text-xs text-zinc-500 uppercase tracking-wider">Taller Especializado de Motocicletas en la Ciudad de México.</p>
+                <div class="flex gap-4 text-zinc-400 text-xl pt-1">
+                    <a href="https://wa.me/525573849264" target="_blank" rel="noopener" class="hover:text-red-500 transition-colors flex items-center gap-2 bg-zinc-950 px-3 py-1.5 border border-zinc-900 text-xs uppercase font-bold">
+                        <i class="fa-brands fa-whatsapp text-lg text-red-600"></i> WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/zonaridermx/" target="_blank" rel="noopener" class="hover:text-red-500 transition-colors flex items-center gap-2 bg-zinc-950 px-3 py-1.5 border border-zinc-900 text-xs uppercase font-bold">
+                        <i class="fa-brands fa-instagram text-lg text-red-600"></i> @zonaridermx
+                    </a>
+                </div>
+            </div>
+
+            <!-- BLOQUE DE HORARIOS CORREGIDO (SÁBADOS A LAS 3:00 PM) -->
+            <div class="bg-zinc-950 border border-zinc-850 p-6 md:col-span-2 w-full grid grid-cols-1 sm:grid-cols-3 gap-4 shadow-xl border-l-4 border-red-600">
+                <div class="sm:col-span-3 mb-2">
+                    <h3 class="font-['Orbitron'] text-lg font-black uppercase text-white tracking-widest flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-red-600"></i> Horarios de Operación en Boxes
+                    </h3>
+                </div>
+                <div class="p-3 bg-black/60 border border-zinc-900"><span class="block text-xs text-zinc-400 font-bold mb-1">Lun a Vie</span><span class="text-xl font-black text-white font-['Orbitron']">9:00 AM - 6:00 PM</span></div>
+                <div class="p-3 bg-black/60 border border-zinc-900"><span class="block text-xs text-zinc-400 font-bold mb-1">Sábados</span><span class="text-xl font-black text-red-500 font-['Orbitron']">9:30 AM - 3:00 PM</span></div>
+                <div class="p-3 bg-red-600/5 border border-red-600/20 text-center flex flex-col justify-center"><span class="text-lg font-black text-zinc-500 font-['Orbitron']">DOMINGO CERRADO</span></div>
+            </div>
+        </div>
+        
+        <!-- HIPERVÍNCULOS INFERIORES ACTUALIZADOS -->
+        <div class="max-w-7xl mx-auto border-t border-zinc-900 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs uppercase tracking-widest text-zinc-500">
+            <div>© 2026 Zona Rider Garage CDMX. Todos los derechos reservados.</div>
+            <div class="flex flex-wrap justify-center items-center gap-4 font-bold">
+                <a href="https://nexorapos.com" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 border-r border-zinc-800 pr-4">
+                    <i class="fa-solid fa-cash-register text-red-600/80"></i> Operamos con NexoraPOS
+                </a>
+                <a href="https://pixelgrimoire.com" target="_blank" rel="noopener" class="text-zinc-400 hover:text-red-500 transition-all duration-200 flex items-center gap-1.5">
+                    <i class="fa-solid fa-wand-magic-sparkles text-red-600"></i> Página desarrollada por PixelGrimoire
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY WHATSAPP BUTTON -->
+    <a href="https://wa.me/525573849264" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_0_15px_rgba(220,38,38,0.4)] z-50" aria-label="Contacto WhatsApp Directo">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS MOTOR DE JUEGO Y CALENDARIO -->
+    <script>
+        let bookedAppointments = {};
+        let userHasWon = false;
+        let verifiedPromoCode = "";
+        let globalPilotName = "";
+        let globalPilotPhone = "";
+
+        const canvas = document.getElementById('raceCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let gameActive = false;
+        let timeLeft = 45; 
+        let timerInterval;
+        let speedSegments = 0; 
+        let gameLoopId;
+
+        let playerX = 300; 
+        let playerTargetX = 300;
+        let playerY = 360;
+
+        let obstacles = [];
+        let obstacleTimer = 0;
+
+        // RADIO CONTROLES
+        const bgMusic = document.getElementById('bg-music');
+        const musicToggleBtn = document.getElementById('music-toggle-btn');
+        const musicIcon = document.getElementById('music-icon');
+        const equalizer = document.getElementById('equalizer');
+
+        musicToggleBtn.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicIcon.classList.replace('fa-play', 'fa-pause');
+                equalizer.classList.remove('hidden');
+            } else {
+                bgMusic.pause();
+                musicIcon.classList.replace('fa-pause', 'fa-play');
+                equalizer.classList.add('hidden');
+            }
+        });
+
+        function drawPlayerBike(x, y) {
+            ctx.save();
+            ctx.translate(x, y);
+
+            ctx.fillStyle = "rgba(0,0,0,0.5)";
+            ctx.beginPath();
+            ctx.ellipse(0, 22, 24, 7, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = "#18181b";
+            ctx.fillRect(-9, 8, 18, 20);
+
+            ctx.fillStyle = "#dc2626";
+            ctx.beginPath();
+            ctx.moveTo(-20, -2); ctx.lineTo(20, -2);
+            ctx.lineTo(14, 16);  ctx.lineTo(-14, 16);
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(-15, 2, 30, 4);
+            ctx.fillStyle = "#dc2626";
+            ctx.fillRect(-11, -18, 22, 14); 
+
+            ctx.fillStyle = "#ffffff";
+            ctx.beginPath();
+            ctx.arc(0, -23, 10, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = "#000000"; 
+            ctx.fillRect(-8, -25, 16, 5);
+
+            ctx.restore();
+        }
+
+        function drawObstacle(obs) {
+            ctx.save();
+            ctx.translate(obs.x, obs.y);
+            let s = obs.scale;
+            ctx.scale(s, s);
+
+            if (obs.type === 'cone') {
+                ctx.fillStyle = "#f97316";
+                ctx.beginPath();
+                ctx.moveTo(0, -20); ctx.lineTo(12, 10); ctx.lineTo(-12, 10);
+                ctx.closePath();
+                ctx.fill();
+                ctx.fillStyle = "#ffffff";
+                ctx.fillRect(-6, -5, 12, 4);
+            } else {
+                ctx.fillStyle = "#111827";
+                ctx.beginPath();
+                ctx.ellipse(0, 0, 18, 8, 0, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            ctx.restore();
+        }
+
+        function renderScene() {
+            ctx.fillStyle = "#0000d6"; 
+            ctx.fillRect(0, 0, canvas.width, 120);
+
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "10px 'Press Start 2P'";
+            ctx.fillText("ZONA RIDER GP", 20, 25);
+            ctx.fillText("TIME", 270, 25);
+            ctx.fillText("SPEED", 440, 25);
+
+            ctx.fillStyle = "#ffff00";
+            ctx.font = "14px 'Press Start 2P'";
+            ctx.fillText(`${timeLeft}S`, 270, 45);
+            ctx.fillText("240KM/H", 440, 45);
+
+            ctx.fillStyle = "#00a877"; 
+            ctx.fillRect(0, 120, canvas.width, canvas.height - 120);
+
+            let horizonY = 120;
+            let bottomY = canvas.height;
+
+            ctx.fillStyle = "#52525b";
+            ctx.beginPath();
+            ctx.moveTo(250, horizonY); ctx.lineTo(350, horizonY);
+            ctx.lineTo(570, bottomY);  ctx.lineTo(30, bottomY);
+            ctx.closePath();
+            ctx.fill();
+
+            let totalLines = 10;
+            for (let i = 0; i < totalLines; i++) {
+                let y1 = horizonY + ((bottomY - horizonY) / totalLines) * i;
+                let y2 = horizonY + ((bottomY - horizonY) / totalLines) * (i + 1);
+                let isRed = (Math.floor(i + speedSegments / 3) % 2 === 0);
+                ctx.fillStyle = isRed ? "#dc2626" : "#ffffff";
+
+                let w1 = 100 + ((540 - 100) / (bottomY - horizonY)) * (y1 - horizonY);
+                let w2 = 100 + ((540 - 100) / (bottomY - horizonY)) * (y2 - horizonY);
+                
+                let x1_left = 300 - w1/2; let x2_left = 300 - w2/2;
+                let x1_right = 300 + w1/2; let x2_right = 300 + w2/2;
+
+                ctx.beginPath();
+                ctx.moveTo(x1_left - 12, y1); ctx.lineTo(x1_left, y1);
+                ctx.lineTo(x2_left, y2); ctx.lineTo(x2_left - 15, y2); ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(x1_right, y1); ctx.lineTo(x1_right + 12, y1);
+                ctx.lineTo(x2_right + 15, y2); ctx.lineTo(x2_right, y2); ctx.fill();
+            }
+
+            obstacles.forEach(obs => drawObstacle(obs));
+
+            playerX += (playerTargetX - playerX) * 0.2;
+            drawPlayerBike(playerX, playerY);
+        }
+
+        function startRaceSequence() {
+            const nameInp = document.getElementById('game-pilot-name').value.trim();
+            const phoneInp = document.getElementById('game-pilot-phone').value.trim();
+            const errorMsg = document.getElementById('phone-error-msg');
+
+            const phoneRegex = /^[0-9]{10}$/;
+
+            if(!nameInp || !phoneRegex.test(phoneInp)) {
+                errorMsg.classList.remove('hidden');
+                return;
+            }
+
+            errorMsg.classList.add('hidden');
+            globalPilotName = nameInp;
+            globalPilotPhone = phoneInp;
+
+            document.getElementById('user-name').value = globalPilotName;
+            document.getElementById('user-phone').value = globalPilotPhone;
+
+            document.getElementById('display-pilot-name').innerText = globalPilotName;
+            document.getElementById('game-auth-box').classList.add('hidden');
+            document.getElementById('game-controls-bar').classList.remove('hidden');
+            document.getElementById('mobile-controls').classList.remove('hidden');
+
+            setupRace();
+        }
+
+        function setupRace() {
+            gameActive = true;
+            timeLeft = 45;
+            obstacles = [];
+            playerX = 300;
+            playerTargetX = 300;
+
+            if(timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                if(gameActive) {
+                    timeLeft--;
+                    document.getElementById('game-status-text').innerText = `TIME: ${timeLeft}S`;
+                    
+                    if(timeLeft <= 0) {
+                        winGame();
+                    }
+                }
+            }, 1000);
+
+            window.removeEventListener('keydown', handleKeyMove);
+            window.addEventListener('keydown', handleKeyMove);
+
+            document.getElementById('btn-left').onclick = () => moveLeft();
+            document.getElementById('btn-right').onclick = () => moveRight();
+
+            if(gameLoopId) cancelAnimationFrame(gameLoopId);
+            runGameLoop();
+        }
+
+        function handleKeyMove(e) {
+            if(e.key === "ArrowLeft" || e.key === "a") moveLeft();
+            if(e.key === "ArrowRight" || e.key === "d") moveRight();
+        }
+
+        function moveLeft() {
+            if (playerTargetX > 180) playerTargetX -= 90;
+        }
+
+        function moveRight() {
+            if (playerTargetX < 420) playerTargetX += 90;
+        }
+
+        function winGame() {
+            gameActive = false;
+            clearInterval(timerInterval);
+            userHasWon = true;
+
+            const shortPhone = globalPilotPhone.slice(-4);
+            verifiedPromoCode = `ZR-${shortPhone}-WIN`;
+
+            document.getElementById('game-controls-bar').classList.add('hidden');
+            document.getElementById('mobile-controls').classList.add('hidden');
+            document.getElementById('game-success-box').classList.remove('hidden');
+            document.getElementById('promo-code-display').innerText = verifiedPromoCode;
+
+            document.getElementById('price-premium').innerHTML = `<span class="line-through text-zinc-650 text-xl mr-2">$1,149</span> $1,034.00`;
+            document.getElementById('price-rider').innerHTML = `<span class="line-through text-zinc-650 text-xl mr-2">$1,499</span> $1,349.00`;
+        }
+
+        function runGameLoop() {
+            if (gameActive) {
+                speedSegments += 2;
+
+                obstacleTimer++;
+                if (obstacleTimer > 35) {
+                    obstacleTimer = 0;
+                    const lanes = [210, 300, 390];
+                    const randomLane = lanes[Math.floor(Math.random() * lanes.length)];
+                    obstacles.push({
+                        x: randomLane,
+                        y: 120,
+                        scale: 0.2,
+                        type: Math.random() > 0.5 ? 'cone' : 'oil'
+                    });
+                }
+
+                for (let i = obstacles.length - 1; i >= 0; i--) {
+                    let obs = obstacles[i];
+                    obs.y += 6; 
+                    obs.scale = 0.2 + ((obs.y - 120) / 300) * 0.9;
+
+                    if (obs.y > 330 && obs.y < 380 && Math.abs(obs.x - playerX) < 40) {
+                        timeLeft = Math.max(1, timeLeft - 5);
+                        obstacles.splice(i, 1);
+                        
+                        canvas.classList.add('translate-x-2');
+                        setTimeout(() => canvas.classList.remove('translate-x-2'), 100);
+                        continue;
+                    }
+
+                    if (obs.y > 420) {
+                        obstacles.splice(i, 1);
+                    }
+                }
+            } else {
+                speedSegments += 0.5;
+            }
+
+            renderScene();
+            gameLoopId = requestAnimationFrame(runGameLoop);
+        }
+
+        // LÓGICA DE CALENDARIO DE 14 DÍAS MÓVILES
+        const dateSelector = document.getElementById('date-selector');
+        const timeSelector = document.getElementById('time-selector');
+        const bookingFormContainer = document.getElementById('booking-form-container');
+        const weekdayHours = ["09:00 AM", "10:30 AM", "12:00 PM", "01:30 PM", "03:00 PM", "04:30 PM"];
+
+        function initCalendar() {
+            const today = new Date();
+            dateSelector.innerHTML = '';
+            let daysAdded = 0; 
+            let offset = 0;
+            const targetDaysLimit = 14; 
+
+            while (daysAdded < targetDaysLimit) {
+                const nextDate = new Date(today);
+                nextDate.setDate(today.getDate() + offset);
+                
+                if(nextDate.getDay() !== 0) { 
+                    const dateString = nextDate.toISOString().split('T')[0];
+                    const options = { weekday: 'short', month: 'short', day: 'numeric' };
+                    const formattedDate = nextDate.toLocaleDateString('es-MX', options);
+
+                    const btn = document.createElement('button');
+                    btn.type = "button";
+                    btn.className = "w-full text-left bg-zinc-950 border border-zinc-850 p-3 font-bold uppercase hover:border-red-600 text-zinc-300 flex justify-between items-center date-btn skew-racer transition-colors";
+                    btn.innerHTML = `<span class="unskew-racer text-xs">${formattedDate}</span> <i class="fa-solid fa-chevron-right text-[10px] text-zinc-600 unskew-racer"></i>`;
+                    
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.date-btn').forEach(b => b.classList.replace('border-red-600', 'border-zinc-850'));
+                        btn.classList.replace('border-zinc-850', 'border-red-600');
+                        document.getElementById('selected-date-input').value = dateString;
+                        renderHours(dateString, nextDate.getDay());
+                        bookingFormContainer.classList.add('hidden', 'opacity-0');
+                    });
+                    dateSelector.appendChild(btn);
+                    daysAdded++;
+                }
+                offset++;
+            }
+        }
+
+        // DÍAS SÁBADOS RENDERIZAN HORAS HASTA LAS 2:00 PM (ÚLTIMO SLOT PARA CERRAR A LAS 3:00 PM)
+        function renderHours(dateString, dayOfWeek) {
+            timeSelector.innerHTML = '';
+            const bookedTimes = bookedAppointments[dateString] || [];
+            const hoursToRender = (dayOfWeek === 6) ? ["09:30 AM", "11:00 AM", "12:30 PM", "02:00 PM"] : weekdayHours;
+
+            hoursToRender.forEach(hour => {
+                const isBooked = bookedTimes.includes(hour);
+                const btn = document.createElement('button');
+                btn.type = "button";
+                btn.className = "skew-racer p-3 text-center font-bold tracking-wider bg-zinc-950 border border-zinc-850 hover:border-red-600 text-white hour-btn transition-colors";
+                btn.innerHTML = `<span class="unskew-racer block text-xs">${hour}</span>`;
+                
+                if (isBooked) {
+                    btn.className = "skew-racer p-3 text-center bg-zinc-950 border border-zinc-900 text-zinc-750 line-through cursor-not-allowed";
+                    btn.disabled = true;
+                    btn.innerHTML = `<span class="unskew-racer block text-xs">Lleno</span>`;
+                } else {
+                    btn.addEventListener('click', () => {
+                        document.getElementById('selected-time-input').value = hour;
+                        bookingFormContainer.classList.remove('hidden');
+                        setTimeout(() => bookingFormContainer.classList.remove('opacity-0'), 50);
+                    });
+                }
+                timeSelector.appendChild(btn);
+            });
+        }
+
+        // ENVÍO DE FORMULARIO A WHATSAPP
+        document.getElementById('appointment-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const date = document.getElementById('selected-date-input').value;
+            const time = document.getElementById('selected-time-input').value;
+            const name = document.getElementById('user-name').value;
+            const phone = document.getElementById('user-phone').value;
+            const bike = document.getElementById('bike-model').value;
+            const service = document.getElementById('required-service').value;
+
+            if (!bookedAppointments[date]) bookedAppointments[date] = [];
+            bookedAppointments[date].push(time);
+            
+            let txtDescuento = "";
+            if (userHasWon && (service === "Premium" || service === "Rider Completo")) {
+                txtDescuento = `\n🎁 *DESCUENTO RACER GANADO:* 10% OFF\n🔑 *CÓDIGO RESPALDO:* ${verifiedPromoCode}`;
+            }
+
+            const mensajeWhatsApp = `🏁 *¡NUEVA CITA ZONA RIDER CDMX!* 🏁\n\n` +
+                                    `👤 *Piloto:* ${name}\n` +
+                                    `📞 *Celular:* ${phone}\n` +
+                                    `🏍️ *Moto:* ${bike}\n` +
+                                    `🛠️ *Servicio:* ${service}\n` +
+                                    `📅 *Fecha:* ${date}\n` +
+                                    `⏰ *Hora:* ${time}${txtDescuento}\n\n` +
+                                    `_Por favor, confirma mi slot en los boxes._`;
+
+            const urlWhatsApp = `https://wa.me/525573849264?text=${encodeURIComponent(mensajeWhatsApp)}`;
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        runGameLoop();
+        initCalendar();
+    </script>
+</body>
+</html>
